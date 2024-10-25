@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Recommendation Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: #fff;
+        }
+        /* Header Styling */
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #141414;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .logo img {
+            height: 40px;
+        }
+        /* Search Bar */
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        
+        .search-bar input {
+            padding: 10px;
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            outline: none;
+            width: 200px;
+        }
+        
+        .search-bar input::placeholder {
+            color: #888;
+        }
+        /* Genre Container */
+        
+        .genre-section {
+            padding: 20px;
+        }
+        
+        .genre-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        /* Movie Card Grid */
+        
+        .movie-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        /* Movie Card Styling */
+        
+        .movie-card {
+            background-color: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .movie-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .movie-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        
+        .movie-card p {
+            font-size: 14px;
+            color: #ccc;
+        }
+        
+        .movie-card button {
+            background-color: #e50914;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+        .movie-card button:hover {
+            background-color: #b10610;
+        }
+        /* Rating Display */
+        
+        .rating {
+            font-size: 16px;
+            color: #ff0;
+            /* Yellow color for rating */
+        }
+        
+        .recommended {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section with Netflix Logo and Search Bar -->
+    <header class="header">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo" />
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for movies..." />
+        </div>
+    </header>
+
+    <!-- Genre Sections -->
+    <div id="genre-sections">
+        <!-- Sections for each genre will be dynamically inserted here -->
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
